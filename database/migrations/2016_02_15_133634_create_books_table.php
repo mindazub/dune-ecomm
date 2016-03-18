@@ -17,6 +17,7 @@ class CreateBooksTable extends Migration
             $table->string('title');
             $table->integer('isbn');
             $table->float('price');
+            $table->float('your_price');
             $table->string('cover');
             $table->integer('author_id')->references('id')->on('authors');
 

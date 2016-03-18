@@ -9,10 +9,11 @@ class Book extends Model
 {
     protected $table = 'books';
 
-	protected $fillable = array('title','isbn','cover','price','author_id');
+	protected $fillable = array('title','isbn','cover','price', 'your_price', 'author_id');
 
 	public function author(){
 		return $this->belongsTo('App\Author', 'id');
     }
+
 
 }
