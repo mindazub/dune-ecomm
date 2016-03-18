@@ -17,17 +17,20 @@ class AuthorsTableSeeder extends Seeder
 
 	        Author::create(array(
 	            'name' => 'Lauren',
-	            'surname'=>'Oliver'
+	            'surname'=>'Oliver',
+	            'email'=>'lauren.oliver@gmail.com'
 	        ));
 
 	        Author::create(array(
 	            'name' => 'Stephenie',
-	            'surname'=>'Meyer'
+	            'surname'=>'Meyer',
+	            'email'=>'stephenie.meyer@gmail.com'
 	        ));
 
 	        Author::create(array(
 	            'name' => 'Dan',
-	            'surname'=>'Brown'
+	            'surname'=>'Brown',
+	            'email'=>'dan.brown@gmail.com'
 	        ));
 
 	}	 
