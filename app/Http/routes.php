@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
+// Route::get('/', 'HomeController@index');
 
 
 /*
@@ -27,10 +27,15 @@ Route::get('/', 'HomeController@index');
 
 Route::group(['middleware' => ['web']], function () {
     //
+    Route::get('/', 'HomeController@index');
+    Route::get('/books', 'HomeController@books');
+Route::post('/books', 'HomeController@store');
+
 });
 
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
     Route::get('/home', 'HomeController@index');
+    Route::get('/shop', 'ShopController@index');
 });

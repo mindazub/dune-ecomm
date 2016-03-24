@@ -18,7 +18,7 @@ class CreateBooksTable extends Migration
             $table->integer('isbn');
             $table->float('price');
             $table->float('your_price');
-            $table->string('cover');
+            $table->string('cover')->nullable();
             $table->integer('author_id')->references('id')->on('authors');
 
     // 'title'=>'Requiem',

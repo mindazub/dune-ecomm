@@ -20,8 +20,8 @@ class CreateAuthorsTable extends Migration
             
               $table->increments('id');
               $table->string('name');
-              $table->string('surname');
-              $table->string('email');
+              $table->string('surname')->nullable();
+              $table->string('email')->nullable();
               $table->timestamps();
             });
         
