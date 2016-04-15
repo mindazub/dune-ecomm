@@ -15,11 +15,25 @@ class ShopController extends Controller
     {
         $authors = Author::all();
 
-        $books = Book::all();
+        $books = Book::paginate(9);
 
-        return view('shop.index', [
+        return view('shop.index2', [
             'books'=> $books,
             'authors' => $authors
             ]);
+    }
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        $book = Book::findOrFail($id);
+
+        // dd($book);
+        
+        return view('shop.show', compact('book'));
     }
 }

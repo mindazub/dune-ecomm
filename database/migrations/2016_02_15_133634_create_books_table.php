@@ -26,6 +26,9 @@ class CreateBooksTable extends Migration
     // 'price'=>'13.40',
     // 'cover'=>'requiem.jpg',
     // 'author_id'=>1
+    // REIKIA IR CATEGORY
+    // $table->string('category_id');
+    // $table create_categories_table, kur id, name, book_id, 
 
             $table->timestamps();
 
