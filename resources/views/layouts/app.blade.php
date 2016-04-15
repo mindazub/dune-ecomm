@@ -75,7 +75,7 @@
 
     <div class="container">
 
-        <!-- <div class="row">
+        <div class="row">
 
             <div class="col-md-3">
                 <p class="lead">Shop Name</p>
@@ -86,7 +86,7 @@
                 </div>
             </div>
 
-            <div class="col-md-9"> -->
+            <div class="col-md-9">
 
     @yield('content')
 
