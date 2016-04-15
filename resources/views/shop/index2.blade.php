@@ -14,7 +14,10 @@
                         <div class="thumbnail">
                             <img src="http://placehold.it/320x150" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">{{ $book->price }}</h4>
+                                <button class="pull-right btn-sm btn-success">
+	                                <i class="fa fa-lg fa-shopping-cart" aria-hidden="true" style="position: auto;"></i>
+                                	<h4 class="pull-right">{{ $book->price }}</h4>
+                                </button>
                                 <h4><a href="/shop/book/{{ $book->id }}">{{ $book->title }}</a>
                                 </h4>
                                 <h5>{{ $book->author->name }} </h5>
