@@ -40,4 +40,9 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/home', 'HomeController@index');
     Route::get('/shop', 'ShopController@index');
     Route::get('/shop/book/{id}', 'ShopController@show');
+    Route::get('/shop/book/{id}/edit', 'ShopController@edit');
+    Route::post('/shop/book/update', [	
+    	'as'=>'books.update',
+    	'uses'=>'ShopController@update'
+    ]);
 });

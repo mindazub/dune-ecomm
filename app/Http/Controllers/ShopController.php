@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Author;
-use App\BOok;
+use App\Book;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -36,4 +36,20 @@ class ShopController extends Controller
         
         return view('shop.show', compact('book'));
     }
+
+    public function edit($id)
+    {
+        $book = Book::findOrFail($id);
+
+        // dd($book);
+        
+        return view('shop.edit', compact('book'));
+    }
+
+    public function update()
+    {
+        dd($request->all());
+    }
+
+
 }

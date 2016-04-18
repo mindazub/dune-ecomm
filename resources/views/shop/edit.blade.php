@@ -2,22 +2,35 @@
 
 @section('content')
 
+{!! Form::model($book, array('method' => 'PATCH', 
+                             'route' => array('books.update', 
+                             $book->id))) !!}
 
-    <!-- Page Content -->
-    <!-- <div class="container">
+    <div>
+        {!! Form::label('image', 'Image:') !!}
+        {!! Form::file('image') !!}
+    </div>
+    <div>
+        {!! Form::label('title', 'Title:') !!}
+        {!! Form::text('title', null, ['class'=>'form-control']) !!}
+    </div>
+    <div>
+        {!! Form::label('author', 'Author:') !!}
+        {!! Form::text('author', $book->author->name, ['class'=>'form-control']) !!}
+    </div>
+    <div>
+        {!! Form::label('price', 'Price:') !!}
+        {!! Form::textarea('price', null, ['class'=>'form-control']) !!}
+    </div>
+    <br/><br/>
+    <div>
+    
+    <br/><br/>
+    </div>
 
-        <div class="row">
+    <button type="submit" class="btn btn-success">Save Changes</button>
 
-            <div class="col-md-3">
-                <p class="lead">Shop Name</p>
-                <div class="list-group">
-                    <a href="#" class="list-group-item active">Category 1</a>
-                    <a href="#" class="list-group-item">Category 2</a>
-                    <a href="#" class="list-group-item">Category 3</a>
-                </div>
-            </div>
-
-            <div class="col-md-9"> -->
+{!! Form::close() !!}
 
                 <div class="thumbnail">
                     <img class="img-responsive" src="http://placehold.it/800x300" alt="">
