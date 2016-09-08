@@ -45,4 +45,6 @@ Route::group(['middleware' => 'web'], function () {
     	'as'=>'books.update',
     	'uses'=>'ShopController@update'
     ]);
+
+    Route::get('/category/{category}', 'HomeController@showVideoProducts');
 });

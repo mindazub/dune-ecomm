@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use App\Book;
 use App\Author;
+use App\Category;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 
@@ -31,9 +32,12 @@ class HomeController extends Controller
 
         $books = Book::all();
 
+        $categories= Category::all();
+
         return view('home', [
             'books'=> $books,
-            'authors' => $authors
+            'authors' => $authors,
+            'categories' => $categories
             ]);
     }
     public function store($request)
@@ -67,5 +71,18 @@ class HomeController extends Controller
         $books = Book::all();
 
         return view('books', compact('books'));
+    }
+
+    public function showVideoProducts(Category $category)
+    {
+        // $cat_prod = Category::with('products')->toArray();
+
+        // dd($cat_prod);
+
+        // dd($category);
+
+        $category = Category::all();
+
+        return view('shop.category')->with('category',$category);
     }
 }

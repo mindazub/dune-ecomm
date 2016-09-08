@@ -10,7 +10,7 @@ class Product extends Model
 
 	protected $fillable = array('category','brand','model','description');
 
-	// public function Books(){
-	//      return $this->belongsTo('Book','book_id');
- //    }
+	public function category(){
+	     return $this->belongsTo('Category');
+    }
 }
