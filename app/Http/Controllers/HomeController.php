@@ -8,6 +8,7 @@ use App\Author;
 use App\Category;
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use Illuminate\Contracts\Auth\Guard;
 
 class HomeController extends Controller
 {
@@ -32,13 +33,18 @@ class HomeController extends Controller
 
         $books = Book::all();
 
-        $categories= Category::all();
+        $categories = Category::all();
+
+        // if(\Auth::check())
+        $user = \Auth::user();
+        // return "no user";
+        // dd($user);
 
         return view('home', [
             'books'=> $books,
             'authors' => $authors,
-            'categories' => $categories
-            ]);
+            'categories' => $categories,
+            'user' => $user ]);
     }
     public function store($request)
     {
