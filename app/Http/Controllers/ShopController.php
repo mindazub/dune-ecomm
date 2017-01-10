@@ -12,14 +12,20 @@ use App\Http\Controllers\Controller;
 
 class ShopController extends Controller
 {
-   public function index()
+   public function index(Request $request)
     {
         $authors = Author::all();
-
-        $books = Book::paginate(9);
-
         $categories = Category::orderBy('name', 'asc')
-                ->get(); 
+                ->get();        
+
+        if ( $category_id = $request->get('category_id') ) {
+            $books = Book::where('category_id', $category_id)->paginate(9);
+        } else {
+
+            
+            $books = Book::paginate(9); 
+        }
+
 
         // dd($categories);
 

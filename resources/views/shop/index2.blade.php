@@ -16,9 +16,12 @@
                 
                 <div class="col-md-3">
                     <p class="lead">Shop Name</p>
+
+                    <?php $selected_category = Request::get('category_id'); ?>
+                    
                     <div class="list-group">
-                        @foreach($categories as $category)
-                        <a href="#" class="list-group-item">{{ $category->name }}</a>
+                        @foreach ($categories as $category)
+                        <a href="#" class="list-group-item {{ empty($selected_category) ? 'active' : '' }}">{{ $category->name }}</a>
                         @endforeach
                     </div>
                 </div>
