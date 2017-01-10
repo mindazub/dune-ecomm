@@ -41,6 +41,7 @@
             <!-- <div class="col-xs-4">{{ $book->title }}</div> -->
             <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
+                            <span>{{ $book->category->name }}</span>
                             <img src="http://placehold.it/320x150" alt="">
                             <div class="caption">
                                 <div class="pull-right">                         

@@ -20,7 +20,8 @@ class BooksTableSeeder extends Seeder
 		    'price'=>'13.40',
 		    'your_price'=>'6.99',
 		    'cover'=>'requiem.jpg',
-		    'author_id'=>1
+		    'author_id'=>1,
+		    'category_id'=>1
 		   ));
 		  Book::create(array(
 		    'title'=>'Twilight',
@@ -28,7 +29,8 @@ class BooksTableSeeder extends Seeder
 		    'price'=>'15.40',
 		    'your_price'=>'6.99',
 		    'cover'=>'twilight.jpg',
-		    'author_id'=>2
+		    'author_id'=>2,
+		    'category_id'=>2
 		  ));
 		  Book::create(array(
 		    'title'=>'Deception Point',
@@ -36,7 +38,8 @@ class BooksTableSeeder extends Seeder
 		    'price'=>'16.40',
 		    'your_price'=>'6.99',
 		    'cover'=>'deception.jpg',
-		    'author_id'=>3
+		    'author_id'=>3,
+		    'category_id'=>3
 		  ));
 
 	  }

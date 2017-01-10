@@ -10,4 +10,7 @@ class Category extends Model
     {
     	return $this->hasMany('Product','category_id');
     }
+    public function book(){
+		return $this->hasMany('App\Book', 'id');
+    }
 }
