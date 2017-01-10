@@ -10,7 +10,7 @@
                     <tbody>
                     @foreach($categories as $category)
                       <tr>
-                        <td><a href="/video/{{ $category->name }}">{{ $category->name }}</a></td>
+                        <td><a href="/category/{{ $category->name }}">{{ $category->name }}</a></td>
                         <td>{{ $category->product_id }}</td>
                       </tr>
                     @endforeach

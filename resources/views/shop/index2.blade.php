@@ -2,6 +2,35 @@
 
 @section('content')
 
+
+@if( ! $categories->count() > 0 )
+                <div class="col-md-3">
+                    <p class="lead">Shop Name</p>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item">Category 1</a>
+                        <a href="#" class="list-group-item">Category 2</a>
+                        <a href="#" class="list-group-item">Category 3</a>
+                    </div>
+                </div>
+            @else
+                
+                <div class="col-md-3">
+                    <p class="lead">Shop Name</p>
+                    <div class="list-group">
+                        @foreach($categories as $category)
+                        <a href="#" class="list-group-item">{{ $category->name }}</a>
+                        @endforeach
+                    </div>
+                </div>
+                
+
+            @endif
+
+
+            <div class="col-md-9">
+
+
+
 <!-- Page Content -->
     
 
@@ -14,15 +43,24 @@
                         <div class="thumbnail">
                             <img src="http://placehold.it/320x150" alt="">
                             <div class="caption">
-                                <button class="pull-right btn-sm btn-success">
-	                                <i class="fa fa-lg fa-shopping-cart" aria-hidden="true" style="position: auto;"></i>
-                                	<h4 class="pull-right">{{ $book->price }}</h4>
-                                </button>
+                                <div class="pull-right">                         
+                                    <h4 class="pull-right" style="font-size: 29px; font-weight: bold-italic;">EUR&nbsp&nbsp{{ $book->price }}</h4>
+                                </div>
                                 <h4><a href="/shop/book/{{ $book->id }}">{{ $book->title }}</a>
                                 </h4>
                                 <h5>{{ $book->author->name }} </h5>
                                 <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
                             </div>
+                            <!-- PIRKTI -->
+                            <div>
+                                <button class="btn btn-lg btn-success">
+                                Buy
+                                <i class="fa fa-lg fa-shopping-cart" aria-hidden="true" style="position: auto;"></i>
+                                </button>
+                            </div>
+                            <!-- END PIRKTI -->
+                            <p></p>
+                            <p></p>
                             <div class="ratings">
                                 <p class="pull-right">15 reviews</p>
                                 <p>

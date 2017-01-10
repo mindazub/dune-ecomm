@@ -27,5 +27,13 @@ class CategoryTableSeeder extends Seeder
 		    'name'=>'Surveilance',
 		    'product_id'=> 3		    
 		   ));
+		  Category::create(array(
+		    'name'=>'Electrical',
+		    'product_id'=> 4		    
+		   ));
+		  Category::create(array(
+		    'name'=>'All',
+		    'product_id'=> 0		    
+		   ));
     }
 }

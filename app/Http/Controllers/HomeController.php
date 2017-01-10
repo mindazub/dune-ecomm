@@ -79,16 +79,34 @@ class HomeController extends Controller
         return view('books', compact('books'));
     }
 
-    public function showVideoProducts(Category $category)
+    public function showVideoProducts($name)
     {
-        // $cat_prod = Category::with('products')->toArray();
+        // $cat_prod = Category::with('books');
 
         // dd($cat_prod);
 
+
         // dd($category);
 
-        $category = Category::all();
+        // $category = Category::with($books);
 
-        return view('shop.category')->with('category',$category);
+        // dd($category);
+
+
+        // $authors = Author::all();
+
+        // $books = Book::all();
+
+        // $categories = Category::all();
+
+        $category = Category::find($name);
+
+        dd($category);
+
+        // dd($categoryWithBooks = Category::with('books'));
+
+        // return $categoryWithBooks;
+
+        // return view('shop.category')->with('category',$category);
     }
 }

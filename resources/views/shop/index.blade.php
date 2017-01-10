@@ -8,14 +8,28 @@
 
         <div class="row">
 
-            <div class="col-md-3">
-                <p class="lead">Shop Name</p>
-                <div class="list-group">
-                    <a href="#" class="list-group-item">Category 1</a>
-                    <a href="#" class="list-group-item">Category 2</a>
-                    <a href="#" class="list-group-item">Category 3</a>
+            @if( ! $categories->count() > 0 )
+                <div class="col-md-3">
+                    <p class="lead">Shop Name</p>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item">Category 1</a>
+                        <a href="#" class="list-group-item">Category 2</a>
+                        <a href="#" class="list-group-item">Category 3</a>
+                    </div>
                 </div>
-            </div>
+            @else
+                
+                <div class="col-md-3">
+                    <p class="lead">Shop Name</p>
+                    <div class="list-group">
+                        @foreach($categories as $category)
+                        <a href="#" class="list-group-item">{{ $category->name }}</a>
+                        @endforeach
+                    </div>
+                </div>
+                
+
+            @endif
 
             <div class="col-md-9">
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Author;
 use App\Book;
+use App\Category;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -17,9 +18,15 @@ class ShopController extends Controller
 
         $books = Book::paginate(9);
 
+        $categories = Category::orderBy('name', 'asc')
+                ->get(); 
+
+        // dd($categories);
+
         return view('shop.index2', [
             'books'=> $books,
-            'authors' => $authors
+            'authors' => $authors,
+            'categories' => $categories
             ]);
     }
     /**
