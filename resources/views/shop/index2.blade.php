@@ -17,11 +17,16 @@
                 <div class="col-md-3">
                     <p class="lead">Shop Name</p>
 
-                    <?php $selected_category = Request::get('category_id'); ?>
+                    <?php $selected_category = Request::has('category_id'); ?>
                     
                     <div class="list-group">
                         @foreach ($categories as $category)
-                        <a href="#" class="list-group-item {{ empty($selected_category) ? 'active' : '' }}">{{ $category->name }}</a>
+                        <a href="#" class="list-group-item {{  empty($selected_category) ? 'active' : '' }}">{{ $category->name }} 
+                            
+                                <span class="badge pull-right">{{ $category->count() }}</span>
+
+                            
+                        </a>
                         @endforeach
                     </div>
                 </div>
