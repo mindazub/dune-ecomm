@@ -35,5 +35,17 @@ class CategoryTableSeeder extends Seeder
 		    'name'=>'All',
 		    'product_id'=> 0		    
 		   ));
+		  Category::create(array(
+		    'name'=>'Web Development',
+		    'product_id'=> 5		    
+		   ));
+		  Category::create(array(
+		    'name'=>'Horror',
+		    'product_id'=> 5		    
+		   ));
+		  Category::create(array(
+		    'name'=>'Responsive',
+		    'product_id'=> 6		    
+		   ));
     }
 }

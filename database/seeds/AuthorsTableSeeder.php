@@ -33,6 +33,36 @@ class AuthorsTableSeeder extends Seeder
 	            'email'=>'dan.brown@gmail.com'
 	        ));
 
+	        Author::create(array(
+	            'name' => 'Matt',
+	            'surname'=>'Stauffer',
+	            'email'=>'matt.stauffer@gmail.com'
+	        ));
+	        Author::create(array(
+	            'name' => 'Taylor',
+	            'surname'=>'Otwell',
+	            'email'=>'taylor.otwell@gmail.com'
+	        ));
+	        Author::create(array(
+	            'name' => 'Brendon',
+	            'surname'=>'Falkowski',
+	            'email'=>'brandon.falkowski@gmail.com'
+	        ));
+	        Author::create(array(
+	            'name' => 'Bradley',
+	            'surname'=>'Stauffer',
+	            'email'=>'matt.stauffer@gmail.com'
+	        ));
+	        Author::create(array(
+	            'name' => 'Maddie',
+	            'surname'=>'Otwell',
+	            'email'=>'taylor.otwell@gmail.com'
+	        ));
+	        Author::create(array(
+	            'name' => 'Tom',
+	            'surname'=>'Falkowski',
+	            'email'=>'brandon.falkowski@gmail.com'
+	        ));	  	  
 	}	 
 	
 }

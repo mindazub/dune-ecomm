@@ -41,6 +41,59 @@ class BooksTableSeeder extends Seeder
 		    'author_id'=>3,
 		    'category_id'=>3
 		  ));
-
+		  Book::create(array(
+		    'title'=>'Laravel Up and Running',
+		    'isbn'=>'9780671027384',
+		    'price'=>'26.40',
+		    'your_price'=>'16.99',
+		    'cover'=>'deception.jpg',
+		    'author_id'=>3,
+		    'category_id'=>3
+		  ));
+		  Book::create(array(
+		    'title'=>'Unit Testing',
+		    'isbn'=>'9780671027384',
+		    'price'=>'16.40',
+		    'your_price'=>'8.99',
+		    'cover'=>'deception.jpg',
+		    'author_id'=>3,
+		    'category_id'=>3
+		  ));
+		  Book::create(array(
+		    'title'=>'101 Unit Testing',
+		    'isbn'=>'9780671027384',
+		    'price'=>'26.40',
+		    'your_price'=>'18.99',
+		    'cover'=>'deception.jpg',
+		    'author_id'=>2,
+		    'category_id'=>2
+		  ));
+		  // Book::create(array(
+		  //   'title'=>'Laravel Up and Running',
+		  //   'isbn'=>'9780671027384',
+		  //   'price'=>'26.40',
+		  //   'your_price'=>'16.99',
+		  //   'cover'=>'deception.jpg',
+		  //   'author_id'=>3,
+		  //   'category_id'=>3
+		  // ));
+		  // Book::create(array(
+		  //   'title'=>'Unit Testing',
+		  //   'isbn'=>'9780671027384',
+		  //   'price'=>'16.40',
+		  //   'your_price'=>'8.99',
+		  //   'cover'=>'deception.jpg',
+		  //   'author_id'=>3,
+		  //   'category_id'=>3
+		  // ));
+		  // Book::create(array(
+		  //   'title'=>'101 Unit Testing',
+		  //   'isbn'=>'9780671027384',
+		  //   'price'=>'26.40',
+		  //   'your_price'=>'18.99',
+		  //   'cover'=>'deception.jpg',
+		  //   'author_id'=>3,
+		  //   'category_id'=>3
+		  // ));		  		  
 	  }
 }

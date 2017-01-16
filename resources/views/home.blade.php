@@ -8,7 +8,7 @@
             @if( $user->admin == 1 )
             <p>Logged in as <strong style="color: red;">Admin</strong>: <strong>{{ $user->name }}</strong></p>
             @else
-            <p>You are logged in as <strong></strong>!</p>
+            <p>You are logged in as &nbsp<strong style="color: green;">User: {{ $user->name }}</strong></p>
             @endif
         @else
             <p>You are NOT logged in.</p>
