@@ -26,9 +26,9 @@ class ShopController extends Controller
             $books = Book::paginate(6); 
         }
 
-        $whoops = new \Whoops\Run;
-        $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
-        $whoops->register();
+        // $whoops = new \Whoops\Run;
+        // $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+        // $whoops->register();
 
         // dd($categories);
 

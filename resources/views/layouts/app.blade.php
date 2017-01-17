@@ -26,7 +26,7 @@
     </style>
 </head>
 <body id="app-layout">
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default" style="/*background: #d35400;*/ color: white; font-weight: bold; padding: 5px;">
         <div class="container">
             <div class="navbar-header">
 
@@ -40,11 +40,11 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Dune Eshop
+                    <img src="/img/bkgrupe_logo.png" alt="bkgrupe-logo" >
                 </a>
             </div>
 
-            <div class="collapse navbar-collapse" id="app-navbar-collapse">
+            <div class="collapse navbar-collapse" id="app-navbar-collapse" style="float:none; padding: 35px;">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url('/home') }}">Home</a></li>
@@ -52,7 +52,7 @@
                 </ul>
 
                 <!-- Right Side Of Navbar -->
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right" style="/*background: #d35400;*/ color: white;">
                     <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{ url('/login') }}">Login</a></li>
@@ -64,7 +64,9 @@
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                                <li><a href="#"><i class="fa fa-btn fa-cog"></i>Settings</a></li>
+                               <li><a href="#"><i class="fa fa-btn fa-user"></i>Profile</a></li>                                
+                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>                                
                             </ul>
                         </li>
                     @endif

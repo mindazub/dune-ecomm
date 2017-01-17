@@ -33,7 +33,9 @@ class HomeController extends Controller
 
         $books = Book::all();
 
-        $categories = Category::all();
+        // $categories = Category::all();
+        $categories = Category::orderBy('name', 'asc')
+                ->get(); 
 
         // if(\Auth::check())
         $user = \Auth::user();

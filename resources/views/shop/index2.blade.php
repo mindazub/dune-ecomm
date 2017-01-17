@@ -15,7 +15,7 @@
             @else
                 
                 <div class="col-md-3">
-                    <p class="lead">Shop Name</p>
+                    <p class="lead" style="background: #d35400; color: white; font-weight: bold; padding: 15px; ">Shop Name</p>
 
                     <?php $selected_category = Request::has('category_id'); ?>
                     
