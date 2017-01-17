@@ -19,11 +19,11 @@ class ShopController extends Controller
                 ->get();        
 
         if ( $category_id = $request->get('category_id') ) {
-            $books = Book::where('category_id', $category_id)->paginate(9);
+            $books = Book::where('category_id', $category_id)->paginate(12);
         } else {
 
             
-            $books = Book::paginate(9); 
+            $books = Book::paginate(12); 
         }
 
 

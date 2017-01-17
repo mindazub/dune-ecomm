@@ -62,6 +62,11 @@ class AuthorsTableSeeder extends Seeder
 	            'name' => 'Tom',
 	            'surname'=>'Falkowski',
 	            'email'=>'brandon.falkowski@gmail.com'
+	        ));
+	        Author::create(array(
+	            'name' => 'Bryan',
+	            'surname'=>'Adren',
+	            'email'=>'bry.aldr@gmail.com'
 	        ));	  	  
 	}	 
 	
