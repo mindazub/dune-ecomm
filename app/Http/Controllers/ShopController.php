@@ -19,13 +19,16 @@ class ShopController extends Controller
                 ->get();        
 
         if ( $category_id = $request->get('category_id') ) {
-            $books = Book::where('category_id', $category_id)->paginate(12);
+            $books = Book::where('category_id', $category_id)->paginate(6);
         } else {
 
-            
-            $books = Book::paginate(12); 
+                                                                                                                                                                                            
+            $books = Book::paginate(6); 
         }
 
+        $whoops = new \Whoops\Run;
+        $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+        $whoops->register();
 
         // dd($categories);
 

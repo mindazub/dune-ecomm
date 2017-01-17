@@ -86,15 +86,15 @@ class BooksTableSeeder extends Seeder
 		    'author_id'=>2,
 		    'category_id'=>2
 		  ));
-		  Book::create(array(
-		    'title'=>'Rails 5 Up and Running',
-		    'isbn'=>'9780571027774',
-		    'price'=>'26.40',
-		    'your_price'=>'16.99',
-		    'cover'=>'deception.jpg',
-		    'author_id'=>1,
-		    'category_id'=>1
-		  ));
+		  // Book::create(array(
+		  //   'title'=>'Rails 5 Up and Running',
+		  //   'isbn'=>'9780571027774',
+		  //   'price'=>'26.40',
+		  //   'your_price'=>'16.99',
+		  //   'cover'=>'deception.jpg',
+		  //   'author_id'=>1,
+		  //   'category_id'=>1
+		  // ));
 		  // Book::create(array(
 		  //   'title'=>'Rails 6 Up and Running',
 		  //   'isbn'=>'9780671027774',
