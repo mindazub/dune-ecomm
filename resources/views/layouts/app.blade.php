@@ -58,6 +58,31 @@
                         <li><a href="{{ url('/login') }}">Login</a></li>
                         <li><a href="{{ url('/register') }}">Register</a></li>
                     @else
+                        
+                        <div class="col-sm-6 col-md-6 pull-left">
+                            <form class="navbar-form" role="search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <I class="fa fa-btn fa-shopping-cart"></I>
+                               (0)<span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#"><i class="fa fa-btn fa-cog"></i>Add Items</a></li>
+                               <li><a href="#"><i class="fa fa-btn fa-user"></i>Terms and Conditions</a></li>                                
+                                <li><a href="#"><i class="fa fa-btn fa-sign-out"></i>Best Deals!</a></li>                                
+                            </ul>
+                        </li>
+                        <!-- END OF CART -->
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 {{ Auth::user()->name }} <span class="caret"></span>
